@@ -1,0 +1,36 @@
+@use "./variables.scss";
+
+.slogan {
+  background-color: #213b7f;
+  color: white;
+  font-weight: bold;
+  min-width: 80px;
+
+  @extend %flex-column;
+
+  .slogan__words {
+    font-weight: 600;
+    min-height: 4rem;
+    font-size: 90px;
+
+    @media only screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media screen and (max-width: 610px) {
+      width: 100vw;
+      font-size: 15vw;
+      .extra-bold {
+        font-size: 25vw;
+      }
+    }
+  }
+
+  @media screen and (min-width: 610px) {
+    .extra-bold {
+      font-size: 120px;
+      font-weight: 800px;
+    }
+  }
+}

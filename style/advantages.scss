@@ -1,0 +1,86 @@
+@use "./variables.scss";
+.advantages {
+  --h-padding: 20px;
+
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAP1AQMAAAAEpdAkAAAABlBMVEXt8vXp8PMayv0PAAADk0lEQVR42u3UMQHAIAADsH77UICQyZoHlOEEKVjY2SMRkaxyecpllMssl7dcvnI55bLLxYMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9OA/FyeQ9QbLaxohAAAAAElFTkSuQmCC");
+  background-repeat: repeat;
+  @media screen and (min-width: 910px) {
+    margin-top: 220px;
+  }
+  margin: 10px auto;
+
+  .advantages-title {
+    padding: var(--h-padding);
+  }
+
+  .title {
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  p {
+    margin-right: 5px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .second-sentence {
+    font-weight: bold;
+  }
+  .third-sentence {
+    color: #0000ff;
+    .bold-text {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  }
+  .describe-pros {
+    display: flex;
+    padding: var(--h-padding);
+    margin: auto;
+    font-size: 18px;
+
+    > div {
+      @media screen and (min-width: 925px) {
+        transition: all 0.5s ease-in-out;
+        padding: 20px;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    .first {
+      color: white;
+      background-color: #000000;
+
+      margin-left: 10px;
+    }
+    .second {
+      color: #000000;
+      background-color: #eff6df;
+      margin-right: 10px;
+    }
+    .first,
+    .second {
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    @media screen and (max-width: 925px) {
+      flex-direction: column;
+      width: 100%;
+      margin: auto;
+      .second {
+        margin-top: 10px;
+      }
+      .first,
+      .second {
+        margin-right: 10px;
+        margin-left: 0px;
+      }
+    }
+  }
+}

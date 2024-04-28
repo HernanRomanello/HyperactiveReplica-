@@ -1,0 +1,137 @@
+@use "./variables.scss";
+
+.how-it-works {
+  color: azure;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAP1AQMAAAAEpdAkAAAABlBMVEXt8vXp8PMayv0PAAADk0lEQVR42u3UMQHAIAADsH77UICQyZoHlOEEKVjY2SMRkaxyecpllMssl7dcvnI55bLLxYMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9KAHPehBD3rQgx70oAc96EEPetCDHvSgBz3oQQ960IMe9OA/FyeQ9QbLaxohAAAAAElFTkSuQmCC");
+  background-repeat: repeat;
+  padding-top: 65px;
+
+  .title {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .accordion-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    justify-content: space-between;
+  }
+
+  .button {
+    color: black;
+    font-size: 2rem;
+    font-weight: 20px;
+  }
+
+  .accordions {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    padding: 50px 40px;
+
+    & > :nth-child(1) {
+      background-color: #0598a8;
+    }
+
+    & > :nth-child(2) {
+      background-color: #39a4dc;
+    }
+
+    & > :nth-child(3) {
+      background-color: #06f;
+    }
+
+    & > :nth-child(4) {
+      background-color: #213b7f;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .button:active,
+    .button:focus,
+    .button.active {
+      transform: rotate(45deg);
+    }
+    .accordion .button {
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+    }
+    p {
+      font-size: 1.1rem;
+      padding: 10px;
+      margin: auto;
+    }
+  }
+
+  // desktop
+  @media screen and (min-width: 1440px) {
+    .accordions {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      padding: 50px 200px;
+
+      .triangle {
+        border: 32px solid transparent;
+        position: absolute;
+        float: left;
+        margin-top: -60px;
+        height: 0;
+        width: 0;
+        flex-shrink: 0;
+        z-index: 1000;
+      }
+
+      & :nth-child(1) .triangle {
+        border-right-color: #0598a8;
+        right: 505px;
+        top: 83px;
+      }
+
+      & :nth-child(2) .triangle {
+        border-top-color: #39a4dc;
+        bottom: -63px;
+        left: 84px;
+      }
+
+      & :nth-child(3) .triangle {
+        border-left-color: #213b7f;
+        top: 81px;
+        left: 0;
+      }
+
+      .accordion-title {
+        font-size: 1.3rem;
+        margin-top: 20px;
+        margin-right: 42px;
+      }
+
+      .accordion {
+        height: 600px;
+        margin: auto;
+        position: relative;
+
+        .button {
+          display: none;
+        }
+        .accordion-body {
+          overflow: visible;
+          P {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}

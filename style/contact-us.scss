@@ -1,0 +1,49 @@
+.contact-us {
+  background-color: #213b7f;
+  padding-bottom: 40px;
+  .register {
+    margin: unset;
+    width: unset;
+    height: unset;
+    padding: 30px;
+
+    .inputs {
+      flex-direction: row;
+      max-height: 60px;
+
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+        max-height: unset;
+        width: 65%;
+
+        .detail-box {
+          justify-content: flex-start;
+
+          label {
+            min-width: 100px;
+            align-items: unset;
+          }
+        }
+      }
+
+      #buttom-frame {
+        width: 200px;
+        .submit-details {
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+          margin: 1px;
+          font-size: 30px;
+        }
+        @media screen and (max-width: 1100px) {
+          margin: auto;
+          width: 250px;
+        }
+      }
+    }
+  }
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}

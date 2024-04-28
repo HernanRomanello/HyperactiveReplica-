@@ -1,0 +1,149 @@
+@use "./variables.scss";
+
+.courses {
+  @extend %flex-column;
+  @extend %justify-evenly;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .courses-title {
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 100%;
+    padding-right: 10%;
+
+    @media screen and (max-width: 600px) {
+      padding: 0;
+      text-align: center;
+    }
+  }
+  .courses-and-register {
+    display: flex;
+
+    @media screen and (max-width: 445px) {
+      height: 600px;
+    }
+
+    .course-row {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+      @media only screen and (max-width: 910px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      .course {
+        width: 128px;
+        margin-left: 20px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 64px;
+          height: 64px;
+        }
+
+        span {
+          .decoration {
+            font-size: 1.2rem;
+            width: 40px;
+            height: 4px;
+            border-radius: 15px;
+            margin: auto;
+          }
+        }
+
+        .arrow-container {
+          display: none;
+          width: 10px;
+          height: 20px;
+          justify-self: center;
+          flex-shrink: 0;
+        }
+
+        .ethical-hacking {
+          background-color: #4ac694;
+        }
+        .system-administration {
+          background-color: #a3b6cc;
+        }
+
+        .marketing {
+          background-color: #3a5998;
+        }
+        .qa {
+          background-color: #316cff;
+        }
+        .ui-ux {
+          background-color: #f9cf58;
+        }
+        .full-stack {
+          background-color: #9da6e9;
+        }
+        .moble {
+          background: #8e8e93;
+        }
+        .embedded {
+          background-color: #475f8e;
+        }
+
+        @media screen and (max-width: 445px) {
+          width: 100%;
+          margin-left: 0px;
+          margin-top: 10px;
+          flex-direction: row;
+
+          justify-content: center;
+          align-items: center;
+          margin-right: 5px;
+          text-align: start;
+          border-top: 0.01px dotted rgba(128, 128, 128, 0.8);
+          border-bottom: 0.01px dotted rgba(128, 128, 128, 0.8);
+          padding: 10px;
+
+          .decoration {
+            transform: rotate(90deg);
+          }
+
+          img {
+            min-width: 35px;
+            width: 10%;
+            display: inline;
+            height: unset;
+          }
+          p {
+            width: 90%;
+            display: inline;
+            font-size: 14px;
+          }
+
+          .arrow-container {
+            display: block;
+          }
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 930px) {
+    .register {
+      display: none;
+    }
+  }
+}

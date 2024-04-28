@@ -1,0 +1,47 @@
+.accordions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  margin: auto;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    height: fit-content;
+  }
+
+  .button:active,
+  .button:focus,
+  .button.active {
+    transform: rotate(180deg);
+  }
+
+  .accordion .button {
+    transition: transform 0s linear;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 0.01px dotted rgba(128, 128, 128, 0.8);
+    height: 80px;
+  }
+
+  .accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    grid-template-rows: repeat(1, 1fr);
+    transition: max-height 0.2s linear;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .accordions {
+    flex-direction: column;
+  }
+}

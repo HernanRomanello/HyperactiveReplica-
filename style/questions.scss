@@ -1,0 +1,21 @@
+@use "./variables.scss";
+
+.questions-part {
+  background-color: #fff6df;
+}
+#questions {
+  color: #007cba;
+  padding: 65px 10px 10px 10px;
+  margin: 0 10%;
+
+  .title {
+    width: 100%;
+    text-align: center;
+    margin: 22px auto;
+    color: black;
+  }
+
+  .consultation {
+    margin: 0;
+  }
+}

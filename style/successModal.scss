@@ -1,0 +1,38 @@
+@use "./variables.scss";
+
+.success-modal {
+  display: none;
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  width: 600px;
+  flex-flow: column;
+  font-size: 38px;
+  h1 {
+    font-size: 64px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  button {
+    border: transparent;
+    font-size: 1.8rem;
+    float: left;
+  }
+  p {
+    margin-top: 20px;
+  }
+
+  i {
+    font-size: 5rem;
+    direction: ltr;
+    float: left;
+    margin-top: 20px;
+  }
+}

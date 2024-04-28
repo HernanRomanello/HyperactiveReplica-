@@ -1,0 +1,100 @@
+@use "./variables.scss";
+
+.modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+
+  .Registration_Modal {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-image: url("./style/456.jpg");
+    z-index: 5000;
+    transform: translateY(-120%);
+    transition: all 0.5s ease-in-out;
+
+    &.animate {
+      transform: translateY(0%);
+    }
+
+    ::placeholder {
+      color: unset;
+    }
+
+    input {
+      width: 80%;
+      height: 40px;
+      border: 1px solid #ccc;
+      padding: 5px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      color: #154b9c;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    gap: 10px;
+
+    top: 18%;
+
+    @extend %flex-column;
+  }
+}
+
+#newsletter-agreement {
+  width: 5%;
+}
+.newsletter-part {
+  width: 100%;
+  display: flex;
+  color: #213b7f;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  direction: ltr;
+}
+
+.close_button {
+  position: absolute;
+  top: 5%;
+  color: #333;
+  border-color: transparent;
+  font-size: 4rem;
+  font: bold;
+  background-image: url("./style/458.jpg");
+  border-radius: 50%;
+  height: 10%;
+  width: 10%;
+}
+
+.modal-box {
+  @extend %flex-column;
+  z-index: 30000;
+}
+
+.submit-button {
+  background-color: #154b9c;
+  color: white;
+  font-weight: bold;
+  width: 30%;
+  height: 8%;
+  text-align: center;
+  padding: 12px;
+}
+.modal-title {
+  margin-top: 10%;
+  color: #154b9c;
+  font-weight: bold;
+  font-size: 2rem;
+}

@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant", sans-serif;
+  direction: rtl;
+}
+
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+  color: white;
+}
+.underline a,
+.underline a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  padding-bottom: 30px;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+.body-mobile {
+  padding-top: 350px;
+}
+
+.body-careers {
+  padding-top: 1040px !important;
+}
+
+button,
+checkbox,
+a,
+input[type="checkbox"],
+.courses-and-register img,
+.courses-and-register p {
+  cursor: pointer;
+}
+
+::placeholder {
+  color: transparent;
+}
+input.invalid::placeholder {
+  color: #8d0f0f !important;
+}
+
+.hebrew-text {
+  text-align: right;
+}
+
+.logo {
+  @media screen and (max-width: 770px) {
+    margin-top: 60px;
+  }
+}
+
+#form a {
+  color: blue;
+}

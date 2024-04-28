@@ -1,0 +1,28 @@
+@use "./variables.scss";
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 3px;
+  right: 20px;
+  background-color: #0066ff;
+  height: 35px;
+  width: 275px;
+  border: 2px solid #25d366;
+  border-radius: 15px;
+  @extend %flex-row;
+  @extend %justify-evenly;
+  button {
+    background-color: #0066ff;
+    border: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    i {
+      font-size: 1.2rem;
+      padding: 2px;
+    }
+  }
+  @media screen and (max-width: 929px) {
+    display: none;
+  }
+}
